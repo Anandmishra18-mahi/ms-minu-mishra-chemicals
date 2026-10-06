@@ -1,151 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Website</title>
-
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial;
-    }
-
-    body{
-      background:#111;
-      color:white;
-    }
-
-    nav{
-      background:#222;
-      padding:15px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-
-    nav h1{
-      color:cyan;
-    }
-
-    nav ul{
-      display:flex;
-      list-style:none;
-      gap:20px;
-    }
-
-    nav a{
-      color:white;
-      text-decoration:none;
-    }
-
-    .hero{
-      height:90vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-    }
-
-    .hero h2{
-      font-size:50px;
-      margin-bottom:20px;
-    }
-
-    .hero p{
-      font-size:20px;
-      margin-bottom:20px;
-    }
-
-    button{
-      padding:12px 25px;
-      border:none;
-      background:cyan;
-      color:black;
-      font-size:18px;
-      cursor:pointer;
-      border-radius:10px;
-    }
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-      padding:40px;
-    }
-
-    .card{
-      background:#222;
-      padding:20px;
-      border-radius:15px;
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:scale(1.05);
-    }
-
-    footer{
-      background:#222;
-      text-align:center;
-      padding:20px;
-      margin-top:30px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ms Minu Mishra Chemicals | Industrial & Cleaning Chemicals</title>
+<meta name="description" content="Ms Minu Mishra Chemicals manufactures phenyl, black phenyl, thinner, battery water, acids and toilet cleaner for commercial and industrial use.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0d0f;--panel:#11161a;--panel2:#171d21;--text:#f4f6f7;--muted:#9da7ad;--accent:#d9ff3f;--line:#273036}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(10,13,15,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.04em;font-size:18px}.logo span{color:var(--accent)}
+nav{display:flex;gap:28px;color:#c5ccd0;font-size:14px}nav a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:#0b0e0f;padding:11px 17px;border-radius:8px;font-weight:800;font-size:13px}
+.hero{min-height:760px;padding:150px 0 100px;display:grid;align-items:center;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:600px;height:600px;right:-180px;top:100px;background:radial-gradient(circle,rgba(217,255,63,.13),transparent 65%);pointer-events:none}
+.kicker{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px}
+h1{font-size:clamp(46px,7vw,84px);line-height:.98;letter-spacing:-.065em;max-width:900px}
+.hero p{max-width:650px;color:var(--muted);font-size:18px;margin:28px 0 34px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:14px 20px;border-radius:9px;font-weight:800;font-size:14px;display:inline-flex;align-items:center;gap:9px}
+.primary{background:var(--accent);color:#0a0d0f}.secondary{border:1px solid var(--line);background:var(--panel);color:#e6eaec}
+.stats{display:flex;gap:45px;margin-top:65px;flex-wrap:wrap}.stat strong{display:block;font-size:26px}.stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+section{padding:100px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}.section-head h2{font-size:42px;letter-spacing:-.045em;line-height:1}.section-head p{color:var(--muted);max-width:480px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px;min-height:230px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#4b575e}.number{color:var(--accent);font-weight:800;font-size:13px}.card h3{font-size:23px;margin:35px 0 8px}.card p{color:var(--muted);font-size:14px}
+.about{background:#0d1114;border-top:1px solid #182025;border-bottom:1px solid #182025}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.about h2{font-size:48px;letter-spacing:-.05em;line-height:1.02}.about p{color:var(--muted);margin-top:20px}
+.points{display:grid;gap:12px}.point{background:var(--panel);border:1px solid var(--line);padding:18px;border-radius:10px;display:flex;gap:14px}.check{color:var(--accent);font-weight:900}
+.contact-box{background:var(--accent);color:#0a0d0f;border-radius:18px;padding:55px;display:flex;justify-content:space-between;gap:35px;align-items:center}.contact-box h2{font-size:43px;line-height:1;letter-spacing:-.05em}.contact-box p{margin-top:12px;max-width:560px}.dark-btn{background:#0a0d0f;color:white;padding:14px 20px;border-radius:9px;font-weight:800;white-space:nowrap}
+footer{padding:35px 0;color:#778188;font-size:13px;border-top:1px solid var(--line)}.footer-flex{display:flex;justify-content:space-between;gap:20px}
+.mobile-menu{display:none}
+@media(max-width:760px){
+nav,.nav-cta{display:none}.mobile-menu{display:block;border:1px solid var(--line);padding:8px 12px;border-radius:7px}
+.hero{min-height:680px;padding-top:125px}.hero p{font-size:16px}
+.grid,.about-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:18px}.section-head h2,.about h2{font-size:36px}
+.contact-box{padding:35px 25px;display:block}.contact-box h2{font-size:34px}.dark-btn{display:inline-block;margin-top:25px}.stats{gap:25px}
+.footer-flex{display:block}.footer-flex p{margin-top:10px}
+}
+</style>
 </head>
 <body>
+<header>
+<div class="container nav">
+<a class="logo" href="#top">MS MINU MISHRA <span>CHEMICALS</span></a>
+<nav><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+<a class="nav-cta" href="#contact">GET IN TOUCH</a>
+<button class="mobile-menu" onclick="document.querySelector('nav').style.display=document.querySelector('nav').style.display==='flex'?'none':'flex'">MENU</button>
+</div>
+</header>
 
-  <nav>
-    <h1>MySite</h1>
+<main id="top">
+<section class="hero">
+<div class="container">
+<div class="kicker">Chemical Manufacturing • India</div>
+<h1>Reliable chemicals.<br><span style="color:var(--accent)">Built for work.</span></h1>
+<p>Manufacturer and supplier of cleaning, maintenance and industrial chemical products — made for practical performance, dependable supply and everyday commercial use.</p>
+<div class="actions"><a class="btn primary" href="#products">Explore Products →</a><a class="btn secondary" href="#contact">Request a Quote</a></div>
+<div class="stats"><div class="stat"><strong>06+</strong><span>Product Categories</span></div><div class="stat"><strong>B2B</strong><span>Supply Focus</span></div><div class="stat"><strong>India</strong><span>Serving Businesses</span></div></div>
+</div>
+</section>
 
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+<section id="products">
+<div class="container">
+<div class="section-head"><h2>Our products</h2><p>A focused range of chemical products for cleaning, maintenance, industrial and commercial applications.</p></div>
+<div class="grid">
+<article class="card"><div class="number">01 / CLEANING</div><h3>Phenyl</h3><p>Cleaning and disinfecting solution suitable for routine commercial and institutional cleaning applications.</p></article>
+<article class="card"><div class="number">02 / CLEANING</div><h3>Black Phenyl</h3><p>Heavy-duty floor and surface cleaning formulation for demanding cleaning environments.</p></article>
+<article class="card"><div class="number">03 / INDUSTRIAL</div><h3>Thinner</h3><p>Solvent product for suitable industrial, paint and maintenance applications.</p></article>
+<article class="card"><div class="number">04 / AUTOMOTIVE</div><h3>Battery Water</h3><p>Battery water for compatible lead-acid battery maintenance applications.</p></article>
+<article class="card"><div class="number">05 / INDUSTRIAL</div><h3>Acids</h3><p>Industrial chemical solutions supplied according to application and customer requirements.</p></article>
+<article class="card"><div class="number">06 / CLEANING</div><h3>Toilet Cleaner</h3><p>Purpose-made toilet and washroom cleaning product for regular commercial and household use.</p></article>
+</div>
+</div>
+</section>
 
-  <section class="hero">
-    <h2>Welcome To My Website</h2>
-    <p>I am learning Web Development</p>
+<section id="about" class="about">
+<div class="container about-grid">
+<div><div class="kicker">Why work with us</div><h2>Simple supply.<br>Serious products.</h2><p>We focus on useful chemical products, straightforward communication and dependable supply for customers who need chemicals that work in the real world.</p></div>
+<div class="points">
+<div class="point"><span class="check">✓</span><div><strong>Product-focused</strong><br><small>Core cleaning and industrial chemical range.</small></div></div>
+<div class="point"><span class="check">✓</span><div><strong>Bulk & regular supply</strong><br><small>Suitable for business and recurring requirements.</small></div></div>
+<div class="point"><span class="check">✓</span><div><strong>Quote-based orders</strong><br><small>Discuss quantity, packaging and application directly.</small></div></div>
+</div>
+</div>
+</section>
 
-    <button onclick="showMessage()">
-      Click Me
-    </button>
-  </section>
+<section id="contact">
+<div class="container">
+<div class="contact-box">
+<div><h2>Need a chemical<br>quote?</h2><p>Tell us what you need, the quantity and your location. We can discuss product availability and supply.</p></div>
+<a class="dark-btn" href="https://wa.me/917631654346?text=Hello%20Ms%20Minu%20Mishra%20Chemicals%2C%20I%20want%20to%20enquire%20about%20your%20products.">WhatsApp Us →</a>
+</div>
+</div>
+</section>
+</main>
 
-  <section class="cards">
-
-    <div class="card">
-      <h3>HTML</h3>
-      <p>Structure of website</p>
-    </div>
-
-    <div class="card">
-      <h3>CSS</h3>
-      <p>Design and styling</p>
-    </div>
-
-    <div class="card">
-      <h3>JavaScript</h3>
-      <p>Website functionality</p>
-    </div>
-
-  </section>
-
-  <footer>
-    <p>Made By You</p>
-  </footer>
-
-  <script>
-    function showMessage(){
-      alert("Website is working!");
-    }
-  </script>
-
+<footer><div class="container footer-flex"><strong>MS MINU MISHRA CHEMICALS</strong><p>© 2026 All rights reserved.</p></div></footer>
 </body>
 </html>
