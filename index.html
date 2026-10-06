@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Website</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial;
+    }
+
+    body{
+      background:#111;
+      color:white;
+    }
+
+    nav{
+      background:#222;
+      padding:15px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav h1{
+      color:cyan;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:20px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+    }
+
+    .hero{
+      height:90vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    .hero h2{
+      font-size:50px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:20px;
+      margin-bottom:20px;
+    }
+
+    button{
+      padding:12px 25px;
+      border:none;
+      background:cyan;
+      color:black;
+      font-size:18px;
+      cursor:pointer;
+      border-radius:10px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      padding:40px;
+    }
+
+    .card{
+      background:#222;
+      padding:20px;
+      border-radius:15px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:scale(1.05);
+    }
+
+    footer{
+      background:#222;
+      text-align:center;
+      padding:20px;
+      margin-top:30px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>MySite</h1>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h2>Welcome To My Website</h2>
+    <p>I am learning Web Development</p>
+
+    <button onclick="showMessage()">
+      Click Me
+    </button>
+  </section>
+
+  <section class="cards">
+
+    <div class="card">
+      <h3>HTML</h3>
+      <p>Structure of website</p>
+    </div>
+
+    <div class="card">
+      <h3>CSS</h3>
+      <p>Design and styling</p>
+    </div>
+
+    <div class="card">
+      <h3>JavaScript</h3>
+      <p>Website functionality</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>Made By You</p>
+  </footer>
+
+  <script>
+    function showMessage(){
+      alert("Website is working!");
+    }
+  </script>
+
+</body>
+</html>
